@@ -142,12 +142,11 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+\Huge{Yu-Siou Lin} \\[7.5pt]
+\href{https://github.com/ericlinqq}{\raisebox{-0.05\height}\faGithub\ ericlinqq} \ $|$ \ 
+\href{https://www.linkedin.com/in/yu-siou-lin-7a3b00252/}{\raisebox{-0.05\height}\faLinkedin\ Yu-Siou Lin} \ $|$ \ 
+\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ ericlin66.cs11@nycu.edu.tw} \ $|$ \ 
+\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +886.975.108.201} \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -155,28 +154,50 @@
 %----------------------------------------------------------------------------------------
 
 %Interests/ Keywords/ Summary
-\section{Summary}
-This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+% \section{Summary}
+% This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
 
 %Experience
-\section{Work Experience}
+% \section{Work Experience}
 
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-\end{jobshort}
+% \begin{jobshort}{Designation}{Jan 2021 - present}
+% long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
+% \end{jobshort}
 
 
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-\end{joblong}
+% \begin{joblong}{Designation}{Mar 2019 - Jan 2021}
+% \item long long line of blah blah that will wrap when the table fills the column width
+% \item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+% \end{joblong}
   
 %Projects
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+\textbf{Bare Metal Operating System on RaspberryPi 3b+} & \hfill \href{https://github.com/ericlinqq/osc2024}{GitHub}\\[3.75pt]
+Skills: C, ARM Assembly, Bare Metal, OS Kernel Development \\
+\multicolumn{2}{@{}X@{}}{
+    \begin{itemize}
+    \item Designed and implemented a minimal OS kernel with \textbf{bootloader self-relocation} and \textbf{UART-based kernel image loading}, \textbf{successfully running on Raspberry Pi 3B+ hardware}.
+    \item Built a \textbf{Linux-like memory subsystem} including \textbf{buddy and slab allocators}, with support for \textbf{virtual memory, demand paging, copy-on-write, and page fault handling}.
+    \item Implemented \textbf{exception/interrupt handling} with timer multiplexing, enabling \textbf{concurrent I/O device management}.
+    \item Developed a \textbf{preemptive scheduler} (round-robin with priority) supporting \textbf{concurrent tasks}, \textbf{Unix-like system calls}, and \textbf{POSIX signals}.
+        \item Added a lightweight \textbf{shell interface} and \textbf{initial RamFS with devicetree} integration for user interaction.
+    \end{itemize}
+}  \\
+
+\textbf{Linux Kernel Module: Fibonacci Driver using Big Integer Arithmetic} & \hfill \href{https://github.com/ericlinqq/fibdrv}{GitHub} \href{https://hackmd.io/@ericlinqq/ByrjW8_ogl}{HackMD}\\[3.75pt]
+Skills: C, Linux Kernel Programming, ARMv8-A, perf\_events \\
+\multicolumn{2}{@{}X@{}}{
+    \begin{itemize}
+    \item Implemented \textbf{Fast Doubling} algorithm with hardware acceleration
+    \item Computes Fibonacci numbers with custom \textbf{arbitrary-precision big-integer arithmetic}.
+    \item Tuned \textbf{kernel boot parameters} (e.g., isolcpus, nohz\_full, rcu\_nocbs) to reduce scheduler and RCU overhead, minimizing noise in performance measurements.
+    \item Integrated the \textbf{Performance Monitoring Unit (PMU)} to monitor CPU cycles
+    \item Conducted \textbf{performance benchmarking} and compared different Fibonacci algorithms implementations
+    \item Measured and analyzed \textbf{kmalloc allocation time} across varying buffer sizes, identifying cold-cache penalties and slab re-use effects on performance.
+    \end{itemize}
+}
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -184,34 +205,36 @@ long long line of blah blah that will wrap when the table fills the column width
 %----------------------------------------------------------------------------------------
 \section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+\textbf{2023 - 2025} & Master's degree at \textbf{National Yang-Ming Chiao-Tung University} \\%\hfill \normalsize (GPA: 4.0/4.0) \\
+\multicolumn{2}{@{}X@{}}{Institute of Data Science and Engineering (Medical Image Processing Lab, MIPLab)}  \\[3.75pt]
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
-
-2022 & Class 12th Some Board \hfill  (Grades) \\
-
-2021 & Class 10th Some Board \hfill  (Grades) \\
+\textbf{2017 - 2021} & Bachelor's degree at \textbf{National Yang-Ming Chiao-Tung University} \\%\hfill \normalsize (GPA: 4.0/4.0) \\
+\multicolumn{2}{@{}X@{}}{Department of Transportation and Logistics Management}  \\ 
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+% \section{Publications}
+% \begin{refsection}[citations.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
-\end{tabularx}
+%\vspace{-0.5cm}
+%\noindent\rule{\textwidth}{0.4pt} 
 
-\vfill
-\center{\footnotesize Last updated: \today}
+\fontsize{10pt}{14pt}\selectfont
+\noindent \textbf{Programming:} C (Advanced), Python (Advanced), C++ (Basic), \LaTeX \hspace{0.5cm} \textbf{OS:} Linux \\ [0.08cm]
+\textbf{Framework \& Package:} PyTorch, OpenCV, Scikit-learn, C++ STL, POSIX Threads, OpenMP, CUDA \\ [0.08cm]
+\textbf{Tools:} Git, GNU Make, QEMU, GDB, Vim, Tmux \\ [0.08cm]
+\textbf{Language:} Chinese (Native), English (Fluent)
+
+% \vfill
+% \center{\footnotesize Last updated: \today}
 
 \end{document}

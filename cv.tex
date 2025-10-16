@@ -149,6 +149,13 @@
 \href{tel:+886975108201}{\raisebox{-0.05\height}\faMobile \ +886.975.108.201} \\
 \end{tabularx}
 
+
+%----------------------------------------------------------------------------------------
+%   SUMMARY
+%----------------------------------------------------------------------------------------
+\section{}
+Master's student in Data Science with a deep focus on low-level systems programming. Demonstrated expertise in OS kernel development, bare-metal programming on ARM platforms, and performance optimization of Linux kernel modules. Seeking a challenging firmware or systems software engineering role.
+
 %----------------------------------------------------------------------------------------
 % EXPERIENCE SECTIONS
 %----------------------------------------------------------------------------------------
@@ -178,11 +185,15 @@
 Skills: C, ARM Assembly, Bare Metal, OS Kernel Development \\
 \multicolumn{2}{@{}X@{}}{
     \begin{itemize}
-    \item Designed and implemented a minimal OS kernel with \textbf{bootloader self-relocation} and \textbf{UART-based kernel image loading}, \textbf{successfully running on Raspberry Pi 3B+ hardware}.
-    \item Built a \textbf{Linux-like memory subsystem} including \textbf{buddy and slab allocators}, with support for \textbf{virtual memory, demand paging, copy-on-write, and page fault handling}.
-    \item Implemented \textbf{exception/interrupt handling} with timer multiplexing, enabling \textbf{concurrent I/O device management}.
-    \item Developed a \textbf{preemptive scheduler} (round-robin with priority) supporting \textbf{concurrent tasks}, \textbf{Unix-like system calls}, and \textbf{POSIX signals}.
-        \item Added a lightweight \textbf{shell interface} and \textbf{initial RamFS with devicetree} integration for user interaction.
+      \item  \textbf{Objective:} To \textbf{master fundamental operating systems concepts} by designing, building, and deploying a functional monolithic kernel from scratch, focusing on memory management and process scheduling.
+      \item \textbf{Key Achievements:}
+      \begin{itemize}
+        \item Engineered a complete \textbf{memory management subsystem}, featuring \textbf{buddy system page allocator} and \textbf{slab allocators}, which successfully managed efficient dynamic memory allocation for kernel objects with \texttt{less fragmentation}.
+        \item Implemented a comprehensive interrupt handling mechanism, including IRQs for \textbf{hardware timers} and \textbf{UART}, enabling \textbf{asynchronous I/O} and \textbf{concurrent I/O device handling}.
+        \item Implemented a robust \textbf{virtual memory system} with \textbf{demand paging} and \textbf{copy-on-write}, reducing the memory footprint and time of forked processes.
+        \item Developed a \texttt{preemptive}, \texttt{priority-based} \textbf{round-robin scheduler} that managed multiple \textbf{concurrent} user-level tasks and handled \textbf{POSIX signals}.
+      \end{itemize}
+    \item \textbf{Outcome:} Successfully \textbf{deployed the OS on Raspberry Pi 3B+ hardware}, achieving a stable runtime environment capable of \textbf{loading and executing user-space programs}, with a custom shell interface.    
     \end{itemize}
 }  \\
 
@@ -190,13 +201,16 @@ Skills: C, ARM Assembly, Bare Metal, OS Kernel Development \\
 Skills: C, Linux Kernel Programming, ARMv8-A, perf\_events \\
 \multicolumn{2}{@{}X@{}}{
     \begin{itemize}
-    \item Implemented \textbf{Fast Doubling} algorithm with hardware acceleration
-    \item Computes Fibonacci numbers with custom \textbf{arbitrary-precision big-integer arithmetic}.
-    \item Tuned \textbf{kernel boot parameters} (e.g., isolcpus, nohz\_full, rcu\_nocbs) to reduce scheduler and RCU overhead, minimizing noise in performance measurements.
-    \item Integrated the \textbf{Performance Monitoring Unit (PMU)} to monitor CPU cycles
-    \item Conducted \textbf{performance benchmarking} and compared different Fibonacci algorithms implementations
-    \item Measured and analyzed \textbf{kmalloc allocation time} across varying buffer sizes, identifying cold-cache penalties and slab re-use effects on performance.
-    \end{itemize}
+      \item \textbf{Objective:} To \textbf{understand Linux kernel module operations} by developing a high-throughput Fibonacci driver capable of correctly calculating large numbers beyond standard integer limits, and to \textbf{investigate kernel performance overhead} through systematic benchmarking.
+      \item \textbf{Key Achievements:}
+      \begin{itemize}
+        \item Implemented a \textbf{Fast Doubling algorithm} with a \textbf{custom arbitrary-precision big-integer} library, accelerating computation by \textbf{4x up} compared to standard iterative methods.
+      \item \textbf{Reduced performance measurement noise} through strategic kernel parameter tuning (\texttt{isolcpus}, \texttt{nohz\_full}), enabling more accurate analysis of CPU cycles.
+      \item Integrated the \textbf{Performance Monitoring Unit (PMU)} via \textbf{perf\_events} for high-precision CPU cycle counting, after initial analysis showed the \texttt{Armv8-A generic timer} lacked sufficient resolution for fine-grained measurements.
+      \item Diagnosed and quantified a \textbf{300\% latency increase} in \textbf{kmalloc} operations caused by \textbf{cold-cache penalties}, providing insights into kernel memory allocation behavior.
+      \end{itemize}
+    \item \textbf{Outcome:} The project resulted in a driver capable of efficiently computing up to at least the \textbf{100,000th Fibonacci number}. A comprehensive \textbf{technical analysis} detailing the optimization process was published on HackMD.    
+  \end{itemize}
 }
 \end{tabularx}
 
@@ -211,6 +225,15 @@ Skills: C, Linux Kernel Programming, ARMv8-A, perf\_events \\
 \textbf{2017 - 2021} & Bachelor's degree at \textbf{National Yang-Ming Chiao-Tung University} \\%\hfill \normalsize (GPA: 4.0/4.0) \\
 \multicolumn{2}{@{}X@{}}{Department of Transportation and Logistics Management}  \\ 
 \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   ACTIVITIES
+%----------------------------------------------------------------------------------------
+\section{Activities}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+\item \textbf{Operational Support (MIPLab):} Assumed responsibility for managing lab finances. This role involved clear communication with multiple stakeholders, including coordinating with professors on budget, liaising with vendors for procurement, and working with the university's cashier division to process reimbursements, ensuring smooth operational support for the entire lab.
+\item \textbf{Dance Troupe Member \& Camp Counselor (NYCU Dance Club):} Performed in the annual showcase, demonstrating teamwork through intensive rehearsals. Additionally, served as a Camp Counselor, guiding and supporting new members to foster an inclusive and welcoming team environment. 
+\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
@@ -229,7 +252,8 @@ Skills: C, Linux Kernel Programming, ARMv8-A, perf\_events \\
 %\noindent\rule{\textwidth}{0.4pt} 
 
 \fontsize{10pt}{14pt}\selectfont
-\noindent \textbf{Programming:} C (Advanced), Python (Advanced), C++ (Basic), Lua (Basic), \LaTeX \hspace{0.5cm} \textbf{OS:} Linux \\ [0.08cm]
+\noindent \textbf{Programming:} C (Advanced), Python (Advanced), C++ (Basic), Lua (Basic), \LaTeX \hspace{0.5cm} \\ [0.08cm]
+\textbf{OS \& Architectures:} Linux, MacOS, ARMv8-A, AMD64  \\ [0.08cm]
 \textbf{Framework \& Package:} PyTorch, OpenCV, Scikit-learn, C++ STL, POSIX Threads, OpenMP, CUDA \\ [0.08cm]
 \textbf{Tools:} Git, GNU Make, GNU Plot, CMake, QEMU, GDB, Perf, Neovim, Tmux \\ [0.08cm]
 \textbf{Language:} Chinese (Native), English (Fluent)
